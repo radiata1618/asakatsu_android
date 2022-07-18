@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.app.asakatsu_android">
 
+    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM"/>
     <application
         android:name=".MyApplication"
         android:allowBackup="true"
@@ -30,6 +31,9 @@
             android:hardwareAccelerated="true"
             android:windowSoftInputMode="adjustResize"
             />
+
+        <receiver android:name=".AlarmBroadcastReceiver"
+            android:process=":remote" />
     </application>
 
 </manifest>
