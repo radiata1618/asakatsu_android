@@ -9,7 +9,6 @@ import android.net.Uri
 import android.os.Bundle
 import android.provider.Settings
 import android.widget.TextView
-import android.widget.Toast
 import androidx.annotation.Nullable
 import androidx.appcompat.app.AppCompatActivity
 import io.flutter.embedding.android.FlutterActivity
@@ -90,10 +89,7 @@ class MainActivity : AppCompatActivity() {
         if (am != null) {
             am.setRepeating(AlarmManager.RTC_WAKEUP,calendar.getTimeInMillis(), 5000,pending)
 
-            Toast.makeText(
-                applicationContext,
-                "Set Alarm ", Toast.LENGTH_SHORT
-            ).show()
+
         }
 
         onClickJump2Flutter()
