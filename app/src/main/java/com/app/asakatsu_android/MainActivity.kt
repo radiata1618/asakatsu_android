@@ -9,6 +9,7 @@ import android.net.Uri
 import android.os.Bundle
 import android.provider.Settings
 import android.widget.TextView
+import android.widget.Toast
 import androidx.annotation.Nullable
 import androidx.appcompat.app.AppCompatActivity
 import io.flutter.embedding.android.FlutterActivity
@@ -60,12 +61,39 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-    fun onClickJump2Flutter(){
-        val intent = FlutterActivity
-            .withCachedEngine(ENGINE_ID)
-            .build(this)
-        startActivity(intent)
-    }
+//    fun onClickJump2Flutter(){
+//        val intent = FlutterActivity
+//            .withCachedEngine(ENGINE_ID)
+//            .build(this)
+//        startActivity(intent)
+//    }
+
+//    override fun onPause() {
+//
+//        Toast.makeText(applicationContext, "onPause", Toast.LENGTH_LONG).show()
+//        super.onPause()
+//
+//        onClickJump2Flutter()
+//
+//    }
+//
+//    override fun onStop() {
+//
+//        Toast.makeText(applicationContext, "onStop", Toast.LENGTH_LONG).show()
+//        super.onStop()
+//
+//        onClickJump2Flutter()
+//
+//    }
+//
+//    override fun onDestroy() {
+//
+//        Toast.makeText(applicationContext, "onDestroy", Toast.LENGTH_LONG).show()
+//        super.onDestroy()
+//
+//        onClickJump2Flutter()
+//
+//    }
 
     override fun onResume() {
         super.onResume()
@@ -88,11 +116,9 @@ class MainActivity : AppCompatActivity() {
         val am: AlarmManager = getSystemService(Context.ALARM_SERVICE) as AlarmManager
         if (am != null) {
             am.setRepeating(AlarmManager.RTC_WAKEUP,calendar.getTimeInMillis(), 5000,pending)
-
-
         }
 
-        onClickJump2Flutter()
+//        onClickJump2Flutter()
 
         requestPermission()
 
