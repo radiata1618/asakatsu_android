@@ -12,8 +12,6 @@ class AlarmBroadcastReceiver : BroadcastReceiver() {
     override fun onReceive(context: Context, intent: Intent) {
         // toast で受け取りを確認
 
-
-
         val fileName = "nextTimeInfo.txt"
         if (File(context.cacheDir, fileName).exists()) {
             val text = File(context.cacheDir, fileName).readText()
@@ -28,7 +26,7 @@ class AlarmBroadcastReceiver : BroadcastReceiver() {
             )
 
             if(nowDateTime.isAfter(nextAlarmTime)){
-                startMainActivity(context)
+                startRingRootActivity(context)
             }else{
             }
 
@@ -36,9 +34,9 @@ class AlarmBroadcastReceiver : BroadcastReceiver() {
         }
     }
 
-    fun startMainActivity(context: Context) {
-        val intent: Intent = Intent(context, MainActivity().javaClass)
-        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+    private fun startRingRootActivity(context: Context) {
+        val intent: Intent = Intent(context, RingRootActivity().javaClass)
+        intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK
         startActivity(context, intent, null)
     }
 }

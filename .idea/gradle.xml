@@ -12,6 +12,11 @@
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/../asakatsu_flultter_module/.android/Flutter" />
+            <option value="$USER_HOME$/flutter/.pub-cache/hosted/pub.dartlang.org/audioplayers_android-1.0.1/android" />
+            <option value="$USER_HOME$/flutter/.pub-cache/hosted/pub.dartlang.org/isar_flutter_libs-2.5.0/android" />
+            <option value="$USER_HOME$/flutter/.pub-cache/hosted/pub.dartlang.org/path_provider_android-2.0.16/android" />
+            <option value="$USER_HOME$/flutter/.pub-cache/hosted/pub.dartlang.org/pedometer-3.0.0/android" />
+            <option value="$USER_HOME$/flutter/.pub-cache/hosted/pub.dartlang.org/vibration-1.7.4-nullsafety.0/android" />
           </set>
         </option>
       </GradleProjectSettings>

@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">asakatsu_android</string>
+    <string name="music_stop">Music stop</string>
 </resources>

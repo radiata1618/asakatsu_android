@@ -26,7 +26,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     // SYSTEM_ALERT_WINDOWの許可をリクエストする
-    fun requestPermission() {
+    private fun requestPermission() {
         if (Settings.canDrawOverlays(this)) {
             // 許可されたときの処理
         } else {
@@ -61,39 +61,13 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-//    fun onClickJump2Flutter(){
-//        val intent = FlutterActivity
-//            .withCachedEngine(ENGINE_ID)
-//            .build(this)
-//        startActivity(intent)
-//    }
+    private fun onClickJump2Flutter(){
+        val intent = FlutterActivity
+            .withCachedEngine(ENGINE_ID)
+            .build(this)
+        startActivity(intent)
+    }
 
-//    override fun onPause() {
-//
-//        Toast.makeText(applicationContext, "onPause", Toast.LENGTH_LONG).show()
-//        super.onPause()
-//
-//        onClickJump2Flutter()
-//
-//    }
-//
-//    override fun onStop() {
-//
-//        Toast.makeText(applicationContext, "onStop", Toast.LENGTH_LONG).show()
-//        super.onStop()
-//
-//        onClickJump2Flutter()
-//
-//    }
-//
-//    override fun onDestroy() {
-//
-//        Toast.makeText(applicationContext, "onDestroy", Toast.LENGTH_LONG).show()
-//        super.onDestroy()
-//
-//        onClickJump2Flutter()
-//
-//    }
 
     override fun onResume() {
         super.onResume()
@@ -118,7 +92,9 @@ class MainActivity : AppCompatActivity() {
             am.setRepeating(AlarmManager.RTC_WAKEUP,calendar.getTimeInMillis(), 5000,pending)
         }
 
-//        onClickJump2Flutter()
+        Toast.makeText(applicationContext, "set alarmManager", Toast.LENGTH_LONG).show()
+
+        onClickJump2Flutter()
 
         requestPermission()
 
